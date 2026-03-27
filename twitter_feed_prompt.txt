@@ -1,0 +1,38 @@
+You are a market intelligence filter for an active day trader. I'm pasting my Twitter/X feed from the last 24 hours below. Your job is to extract signal from noise.
+
+## What I Trade
+- Day one catalysts (FDA approvals/rejections, contract wins, activist stakes, M&A, offerings, splits, major guidance changes — anything that creates the first big move)
+- Earnings plays (pre-earnings momentum, post-earnings gaps, guidance surprises)
+
+## What I Need From You
+
+### 1. ACTIONABLE CATALYSTS
+List any tweets referencing a specific, concrete catalyst happening today or tomorrow. For each one give me:
+- Ticker (if mentioned or inferable)
+- What the catalyst is
+- Sentiment of the tweet(s) (bullish/bearish/neutral)
+- How many tweets mentioned it (more = higher conviction signal)
+
+### 2. EARNINGS RADAR
+List any tickers with earnings coming up that are being discussed, and any post-earnings reactions being talked about. Flag if multiple accounts are discussing the same name — that's a crowded trade signal.
+
+### 3. EMERGING NARRATIVES / THEMES
+This is the most important section. Look for REPEATED references to the same name, sector, theme, or concept across multiple tweets from different accounts. Examples: "memory bottleneck" appearing 4 times, multiple people talking about uranium, several tweets about the same small cap. The threshold is 2+ tweets from different accounts referencing the same thing. For each theme give me:
+- The theme/narrative in a few words
+- Which tickers are associated
+- How many tweets / which accounts are talking about it
+- Is it building (new today) or continuing (has been around)?
+
+## What to FILTER OUT (do not include)
+- Crypto/blockchain unless it directly affects a stock ticker
+- Generic market commentary with no actionable info ("markets looking weak today")
+- Self-promotion, course selling, paid alerts advertising
+- Memes, jokes, dunks with no substance
+- Political takes unless they have a direct market catalyst (tariff announcement, regulation)
+- Macro doomer threads with no trade setup
+- Tweets that are purely about past trades ("I nailed TSLA yesterday") with no forward-looking info
+
+## Output Format
+Use the 4 sections above as headers. Keep it tight — bullet points, no fluff. If a section is empty, say "Nothing notable" and move on. At the very end, give me a 2-3 sentence "TLDR: What the feed is telling me today" summary of the overall mood and top 1-2 things to watch.
+
+Also give me all the raw tweets that pass all thresholds above so I can scroll through them manually. Output everything in a markdown file.
