@@ -17,3 +17,6 @@ uploads/
 
 # OS
 .DS_Store
+
+# add this line
+.env.local

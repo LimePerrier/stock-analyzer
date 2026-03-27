@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import sys
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
@@ -16,9 +17,14 @@ store.init_db()
 engine = WebEngine()
 
 app = FastAPI(title="Stock Analyzer Web API", version="0.1.0")
+FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:3000")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        FRONTEND_URL,
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
